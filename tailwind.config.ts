@@ -16,11 +16,6 @@ const config: Config = {
         terracotta: "#E05A36",
         gold: "#E6A13B",
         oat: "#E6DFD5",
-        // New editorial tokens — "Refined Editorial Travel"
-        background: "#FAF9F6",
-        surface: "#E8E5D9",
-        "primary-text": "#2C2825",
-        "secondary-text": "#5C564F",
         teal: "#1E5F5A"
       },
       fontFamily: {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Typewriter } from "@/components/typewriter";
 import {
   ArrowUpRight,
   MapPin,
@@ -63,9 +64,11 @@ export default function HomePage() {
             <p className="font-mono text-xs tracking-widest uppercase text-teal flex items-center gap-3">
               <span className="w-6 h-px bg-teal" /> Builder & System Thinker
             </p>
-            <h1 className="mt-8 font-display text-6xl sm:text-7xl md:text-[6.5rem] font-bold leading-[0.95] tracking-tight text-espresso max-w-4xl">
-              Mulagiri<br />
-              <span className="text-teal/80">Charan</span> Tej
+            <h1 className="mt-8 font-display text-6xl sm:text-7xl md:text-[6.5rem] font-bold leading-[0.95] tracking-tight text-espresso max-w-4xl h-[120px] sm:h-[140px] md:h-[200px]">
+              <Typewriter text="Mulagiri" speed={80} cursor={false} />
+              <br />
+              <Typewriter text="Charan " speed={80} delay={700} cursor={false} className="text-teal/80" />
+              <Typewriter text="Tej" speed={80} delay={1300} cursor={true} />
             </h1>
           </FadeIn>
 

@@ -44,8 +44,8 @@ export function SystemsExplorer() {
               <button
                 className={`focus-ring rounded-md border px-3 py-2 font-mono text-xs uppercase transition-colors ${
                   activeFilter === filter
-                    ? "border-terracotta bg-terracotta text-cream"
-                    : "border-oat bg-sand text-espresso hover:border-gold hover:bg-cream"
+                    ? "border-teal bg-teal text-cream"
+                    : "border-oat bg-sand text-espresso hover:border-teal hover:bg-teal/5"
                 }`}
                 key={filter}
                 onClick={() => setActiveFilter(filter)}

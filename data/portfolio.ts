@@ -30,29 +30,7 @@ export type PortfolioSystem = {
   links: SystemLink[];
 };
 
-export const hero = {
-  headline: "I build intelligent systems that solve complex, real-world problems.",
-  subheadline:
-    "Engineering AI pipelines, full-stack architectures, and robust backend infrastructure to bridge the gap between raw data and human decision-making."
-};
 
-export const philosophy = [
-  {
-    title: "Impact Over Complexity",
-    body:
-      "I don't build for the sake of using shiny frameworks. Whether it's preventing road accidents or routing pedestrians away from urban heat, I engineer solutions where technology directly improves human outcomes."
-  },
-  {
-    title: "Systems, Not Just Models",
-    body:
-      "An AI model is just a component. I design end-to-end architectures from data pipelines and robust database scaling to user feedback loops and orchestrators ensuring the whole system works seamlessly in production environments."
-  },
-  {
-    title: "The Human-in-the-Loop",
-    body:
-      "Automation should empower, not blindly replace. I design systems that augment human intelligence, bringing algorithms and human validation together for high-stakes decision-making."
-  }
-];
 
 export const systems: PortfolioSystem[] = [
   {
@@ -313,29 +291,8 @@ export const ledgerEntries = [
   {
     year: "Ongoing",
     category: "Leadership",
-    deployment: "AAC & MLSC Core Member roles",
+    deployment: "AAC Core Member roles",
     impact: "Core Member (Tech Domain) at Advanced Academic Center (AAC)."
-  },
-  {
-    year: "Active",
-    category: "System",
-    deployment: "Agentic Production Management System",
-    impact:
-      "Architected a multi-agent factory simulation with demand forecasting, machine health telemetry agents, and central orchestration routing."
-  },
-  {
-    year: "Active",
-    category: "Infrastructure",
-    deployment: "Apex Platform — DevOps Deployment",
-    impact:
-      "Deployed the Apex productivity platform to production; managing ongoing infrastructure, scaling, and uptime as DevOps/Architect."
-  },
-  {
-    year: "Adopted",
-    category: "Institutional Infra",
-    deployment: "GRIET Coding Platform — Developer",
-    impact:
-      "Built and shipped an institutional competitive coding platform adopted by the GRIET campus community for club contests and events."
   },
   {
     year: "Ongoing",
@@ -345,9 +302,6 @@ export const ledgerEntries = [
       "Running ongoing mentorship sessions for junior students through the Advanced Academic Center, covering systems thinking and full-stack development."
   }
 ];
-
-export const operatorStatement =
-  "Building resilient systems requires a resilient mindset. When I step away from the architecture, you'll find me trekking high-altitude trails on a budget seeking out the grit of the mountains over luxury travel. I admire those who execute flawlessly under immense pressure, much like a legendary cricket chase, and I carry that same composure into my deadlines. Let's build something that matters.";
 
 export const contactLinks: SystemLink[] = [
   { label: "Email", href: "mailto:mulagiricharantej@gmail.com", external: true },

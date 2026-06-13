@@ -29,7 +29,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${system.title} Case Study | Charan Tej`,
+    title: `${system.title} Case Study`,
     description: system.summary
   };
 }
@@ -61,7 +61,7 @@ export default async function SystemDetailPage({ params }: SystemPageProps) {
             <div className="max-w-4xl">
               <div className="flex items-center gap-4 mb-8">
                 <span className="font-mono text-sm tracking-widest uppercase text-teal font-medium bg-teal/10 px-3 py-1 rounded-sm">
-                  System {system.number}
+                  {system.number}
                 </span>
                 <span className="w-12 h-px bg-terracotta/30" />
                 <span className="font-mono text-sm tracking-widest uppercase text-terracotta">

@@ -10,7 +10,7 @@ type ProjectCardProps = {
 export function ProjectCard({ system, compact = false }: ProjectCardProps) {
   return (
     <Link
-      className="focus-ring group flex h-full flex-col justify-between rounded-lg border border-oat bg-sand p-5 transition-colors hover:border-gold hover:bg-cream md:p-6"
+      className="focus-ring group flex h-full flex-col justify-between rounded-lg border border-oat bg-sand p-5 transition-colors hover:border-teal/40 hover:bg-cream md:p-6"
       href={`/systems/${system.slug}`}
     >
       <div>
