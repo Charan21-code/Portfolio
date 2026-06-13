@@ -3,12 +3,19 @@
 @tailwind utilities;
 
 :root {
+  /* Original warm palette */
   --cream: #fdfbf7;
   --sand: #faf6f0;
   --espresso: #1e1916;
   --terracotta: #e05a36;
   --gold: #e6a13b;
   --oat: #e6dfd5;
+  /* New editorial tokens */
+  --background: #faf9f6;
+  --surface: #e8e5d9;
+  --primary-text: #2c2825;
+  --secondary-text: #5c564f;
+  --teal: #1e5f5a;
 }
 
 * {
@@ -25,7 +32,15 @@ body {
   margin: 0;
   background: var(--cream);
   color: var(--espresso);
-  font-family: "Plus Jakarta Sans", Inter, "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-sans), "Plus Jakarta Sans", Inter, "Segoe UI", Arial, sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), "Playfair Display", Georgia, serif;
+  }
 }
 
 ::selection {

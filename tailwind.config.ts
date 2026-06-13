@@ -9,17 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Existing warm palette — preserved
         cream: "#FDFBF7",
         sand: "#FAF6F0",
         espresso: "#1E1916",
         terracotta: "#E05A36",
         gold: "#E6A13B",
-        oat: "#E6DFD5"
+        oat: "#E6DFD5",
+        // New editorial tokens — "Refined Editorial Travel"
+        background: "#FAF9F6",
+        surface: "#E8E5D9",
+        "primary-text": "#2C2825",
+        "secondary-text": "#5C564F",
+        teal: "#1E5F5A"
       },
       fontFamily: {
-        display: ["Playfair Display", "Clash Display", "Georgia", "serif"],
-        sans: ["Plus Jakarta Sans", "Inter", "Segoe UI", "Arial", "sans-serif"],
-        mono: ["JetBrains Mono", "Fira Code", "Consolas", "monospace"]
+        display: ["var(--font-display)", "Playfair Display", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "Plus Jakarta Sans", "Inter", "Arial", "sans-serif"],
+        mono: ["var(--font-mono)", "JetBrains Mono", "Fira Code", "Consolas", "monospace"]
       },
       keyframes: {
         fadeUp: {

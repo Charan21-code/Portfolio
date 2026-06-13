@@ -8,7 +8,7 @@ const navItems = [
   { href: "/", label: "[ Home ]" },
   { href: "/systems", label: "[ Systems ]" },
   { href: "/ledger", label: "[ Ledger ]" },
-  { href: "/operator", label: "[ Operator ]" }
+  { href: "/#contact", label: "[ Contact ]" }
 ];
 
 export function SiteHeader() {
@@ -21,7 +21,7 @@ export function SiteHeader() {
           className="focus-ring w-fit font-display text-xl font-bold text-espresso"
           href="/"
         >
-          Systems Portfolio
+          Charan Tej
         </Link>
 
         <nav

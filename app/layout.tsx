@@ -1,14 +1,34 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap"
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap"
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: {
-    default: "Systems Portfolio",
-    template: "%s | Systems Portfolio"
+    default: "Mulagiri Charan Tej",
+    template: "%s | Mulagiri Charan Tej"
   },
   description:
-    "A warm editorial engineering portfolio for AI pipelines, full-stack systems, and backend infrastructure."
+    "Portfolio of Mulagiri Charan Tej — Full-stack engineer building AI pipelines, resilient backend systems, and human-in-the-loop applications."
 };
 
 export default function RootLayout({
@@ -17,18 +37,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${playfair.variable} ${jakarta.variable} ${jetbrains.variable}`}>
       <body className="min-h-screen antialiased">
         <SiteHeader />
         <main>{children}</main>
-        <footer className="border-t border-oat bg-cream px-5 py-8 text-sm text-espresso/70 md:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <p>Systems Portfolio</p>
-            <p className="font-mono text-xs uppercase text-espresso/55">
-              Warm Editorial Tech / Rich Cream / Terracotta
-            </p>
-          </div>
-        </footer>
+        <SiteFooter />
       </body>
     </html>
   );

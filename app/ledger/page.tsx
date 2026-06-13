@@ -1,11 +1,14 @@
+'use client';
+
 import type { Metadata } from "next";
 import { Database } from "lucide-react";
+import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/section-heading";
 import { ledgerEntries } from "@/data/portfolio";
 
-export const metadata: Metadata = {
-  title: "Ledger"
-};
+// Note: metadata export doesn't work in 'use client' components.
+// Move metadata to a parent server layout if needed, or use a separate generateMetadata export.
+// For now, the page title is handled by the root layout template.
 
 export default function LedgerPage() {
   return (
@@ -37,12 +40,20 @@ export default function LedgerPage() {
                 </tr>
               </thead>
               <tbody>
-                {ledgerEntries.map((entry) => (
-                  <tr
-                    className="border-b border-oat last:border-b-0 hover:bg-cream"
+                {ledgerEntries.map((entry, index) => (
+                  <motion.tr
                     key={`${entry.category}-${entry.deployment}`}
+                    className="group border-b border-oat last:border-b-0 transition-colors hover:bg-[#1E5F5A]/[0.04] cursor-default"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-5%" }}
+                    transition={{
+                      duration: 0.55,
+                      ease: [0.21, 0.47, 0.32, 0.98],
+                      delay: index * 0.06
+                    }}
                   >
-                    <td className="px-4 py-5 align-top font-mono text-sm text-terracotta">
+                    <td className="px-4 py-5 align-top font-mono text-sm text-terracotta group-hover:text-[#1E5F5A] transition-colors">
                       {entry.year}
                     </td>
                     <td className="px-4 py-5 align-top font-mono text-sm uppercase text-espresso/65">
@@ -54,7 +65,7 @@ export default function LedgerPage() {
                     <td className="px-4 py-5 align-top leading-7 text-espresso/70">
                       {entry.impact}
                     </td>
-                  </tr>
+                  </motion.tr>
                 ))}
               </tbody>
             </table>

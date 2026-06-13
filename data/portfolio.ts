@@ -56,45 +56,80 @@ export const philosophy = [
 
 export const systems: PortfolioSystem[] = [
   {
-    slug: "verdex",
+    slug: "gprime-offline-coding-engine",
     number: "System 01",
-    title: "VERDEX",
-    subtitle: "Coolest Path System",
-    tag: "Hackathon Winner // Climate Tech & GIS",
-    categoryTag: "CLIMATE TECH & GIS",
-    categories: ["AI/ML"],
+    title: "Offline Competitive Coding Engine",
+    subtitle: "GPrime",
+    tag: "Infrastructure // Backend Scale",
+    categoryTag: "BACKEND SCALE",
+    categories: ["Backend & Scale"],
     problem:
-      "Urban heat islands make daytime navigation hazardous. Standard mapping engines optimize purely for time, ignoring thermal stress.",
-    solutionLabel: "The Solution",
+      "Tech clubs lack reliable platforms for coding contests, relying on third-party tools that fail without internet access.",
+    solutionLabel: "The System",
     solution:
-      "An intelligent routing engine that routes users along the coolest urban paths using satellite-fetched tree canopy data. It features a municipal dashboard recommending optimal tree-planting zones to combat urban heat.",
-    stack: ["Python", "FastAPI", "Next.js", "QGIS/GeoPandas"],
-    impact: "2nd Place at the Unnati Hackathon (Sustainability Domain).",
+      "A fully offline, locally-hosted examination platform deployed on campus LAN with Docker containers for reproducible, conflict-free setup. It features a Redis-backed submission queue that buffers 100+ simultaneous code submissions, delivering instant acknowledgment while the judge processes entries.",
+    stack: ["Socket.io", "PostgreSQL", "Redis", "Docker", "Ubuntu Server"],
     hook:
-      "An intelligent routing engine for cooler urban paths. The system pairs satellite-fetched canopy data with a municipal dashboard for tree-planting decisions.",
+      "A campus-LAN coding engine designed to work without internet access. Redis buffers 100+ simultaneous submissions while Docker keeps judging reproducible.",
     summary:
-      "A climate-tech routing system that reframes navigation as a human thermal safety problem.",
+      "An offline contest platform built for reliability under campus-scale pressure.",
     workflow: [
-      "Satellite canopy data",
-      "QGIS and GeoPandas processing",
-      "FastAPI routing service",
-      "Next.js pedestrian interface",
-      "Municipal planting dashboard"
+      "Contest clients on LAN",
+      "Socket.io event channel",
+      "Redis submission queue",
+      "Dockerized judge workers",
+      "PostgreSQL result ledger"
     ],
     implementation: [
-      "Python and GeoPandas handle spatial transforms where geospatial correctness matters more than interface polish.",
-      "FastAPI exposes a lean routing layer that can be consumed by both pedestrian navigation and municipal planning views.",
-      "Next.js keeps the user-facing route experience fast while leaving the geospatial workload on the backend.",
-      "QGIS supports validation of tree canopy and heat-island assumptions before they are translated into routing weights."
+      "Socket.io gives participants instant acknowledgment while slower judge work continues asynchronously.",
+      "Redis absorbs traffic spikes from 100+ simultaneous code submissions without making the UI feel stuck.",
+      "Docker keeps compiler and runtime environments reproducible across contest machines.",
+      "PostgreSQL acts as the durable contest ledger for users, submissions, results, and audits."
     ],
     links: [
-      { label: "Code Walkthrough", href: "/operator#contact" },
-      { label: "Discuss VERDEX", href: "/operator#contact" }
+      { label: "Code Walkthrough", href: "https://github.com/Saketh-debug/gp-ultimate-quiz-platform.git", external: true },
+      { label: "Discuss GPrime", href: "/#contact" }
+    ]
+  },
+  {
+    slug: "agentic-production-management-system",
+    number: "System 02",
+    title: "Agentic Production Management System",
+    subtitle: "Multi-Agent Factory Simulation",
+    tag: "Agentic AI // Factory Simulation",
+    categoryTag: "AGENTIC AI",
+    categories: ["AI/ML"],
+    problem:
+      "Factory floors run on static schedules that fail to adapt dynamically when machine health changes or demand signals fluctuate.",
+    solutionLabel: "The System",
+    solution:
+      "A factory orchestration simulator coordinating six specialized agents managed by a central orchestrator agent: Demand Forecasting, Machine Health, Scheduler, Finance, Carbon Emission, and supporting roles. The architecture balances dynamic resource schedules, margins, and environmental metrics, while exposing system routing bottlenecks.",
+    stack: ["Python", "LLMs", "ML", "React"],
+    hook:
+      "A multi-agent factory simulation exploring orchestration. The system coordinates six specialized agents (forecasting, health, scheduling, finance, carbon, etc.) under a central supervisor.",
+    summary:
+      "An experimental agentic orchestration layer modeling adaptive industrial workflows, sustainability margins, and constraint trade-offs.",
+    workflow: [
+      "Demand forecasting & Carbon emission agents feed telemetry",
+      "Machine health & Finance constraints processed",
+      "Central Orchestrator routes scheduling tasks",
+      "Scheduler agent constructs dynamic production timelines",
+      "React dashboard displays real-time agent graph state"
+    ],
+    implementation: [
+      "Python manages the multi-agent execution thread lifecycle, communication protocols, and simulation states.",
+      "LLMs run the central orchestrator routing logic and structured reasoning workflows between agents.",
+      "ML handles predictive analytics for machine health states and demand volume signals.",
+      "React builds the supervisory panel showing agent telemetry, scheduling, and carbon metrics."
+    ],
+    links: [
+      { label: "Code Walkthrough", href: "https://github.com/Charan21-code/Pixel-Pioneers-CBIT.git", external: true },
+      { label: "Discuss Agentic System", href: "/#contact" }
     ]
   },
   {
     slug: "ai-driven-soar-platform",
-    number: "System 02",
+    number: "System 03",
     title: "AI-Driven SOAR Platform",
     subtitle: "Cybersecurity Automation",
     tag: "Hackathon Winner // Cybersecurity",
@@ -133,49 +168,50 @@ export const systems: PortfolioSystem[] = [
       "SGD incremental updates and a Contextual Bandit approach let the decision engine improve from review outcomes."
     ],
     links: [
-      { label: "Code Walkthrough", href: "/operator#contact" },
-      { label: "Discuss SOAR", href: "/operator#contact" }
+      { label: "Code Walkthrough", href: "https://github.com/Sudhamsh19/Pixel_Pioneers.git", external: true },
+      { label: "Discuss SOAR", href: "/#contact" }
     ]
   },
   {
-    slug: "gprime-offline-coding-engine",
-    number: "System 03",
-    title: "Offline Competitive Coding Engine",
-    subtitle: "GPrime",
-    tag: "Infrastructure // Backend Scale",
-    categoryTag: "BACKEND SCALE",
-    categories: ["Backend & Scale"],
+    slug: "verdex",
+    number: "System 04",
+    title: "VERDEX",
+    subtitle: "Coolest Path System",
+    tag: "Hackathon Winner // Climate Tech & GIS",
+    categoryTag: "CLIMATE TECH & GIS",
+    categories: ["AI/ML"],
     problem:
-      "Tech clubs lack reliable platforms for coding contests, relying on third-party tools that fail without internet access.",
-    solutionLabel: "The System",
+      "Urban heat islands make daytime navigation hazardous. Standard mapping engines optimize purely for time, ignoring thermal stress.",
+    solutionLabel: "The Solution",
     solution:
-      "A fully offline, locally-hosted examination platform deployed on campus LAN with Docker containers for reproducible, conflict-free setup. It features a Redis-backed submission queue that buffers 100+ simultaneous code submissions, delivering instant acknowledgment while the judge processes entries.",
-    stack: ["Socket.io", "PostgreSQL", "Redis", "Docker", "Ubuntu Server"],
+      "An intelligent routing engine that routes users along the coolest urban paths using satellite-fetched tree canopy data. It features a municipal dashboard recommending optimal tree-planting zones to combat urban heat.",
+    stack: ["Python", "FastAPI", "Next.js", "QGIS/GeoPandas"],
+    impact: "2nd Place at the Unnati Hackathon (Sustainability Domain).",
     hook:
-      "A campus-LAN coding engine designed to work without internet access. Redis buffers 100+ simultaneous submissions while Docker keeps judging reproducible.",
+      "An intelligent routing engine for cooler urban paths. The system pairs satellite-fetched canopy data with a municipal dashboard for tree-planting decisions.",
     summary:
-      "An offline contest platform built for reliability under campus-scale pressure.",
+      "A climate-tech routing system that reframes navigation as a human thermal safety problem.",
     workflow: [
-      "Contest clients on LAN",
-      "Socket.io event channel",
-      "Redis submission queue",
-      "Dockerized judge workers",
-      "PostgreSQL result ledger"
+      "Satellite canopy data",
+      "QGIS and GeoPandas processing",
+      "FastAPI routing service",
+      "Next.js pedestrian interface",
+      "Municipal planting dashboard"
     ],
     implementation: [
-      "Socket.io gives participants instant acknowledgment while slower judge work continues asynchronously.",
-      "Redis absorbs traffic spikes from 100+ simultaneous code submissions without making the UI feel stuck.",
-      "Docker keeps compiler and runtime environments reproducible across contest machines.",
-      "PostgreSQL acts as the durable contest ledger for users, submissions, results, and audits."
+      "Python and GeoPandas handle spatial transforms where geospatial correctness matters more than interface polish.",
+      "FastAPI exposes a lean routing layer that can be consumed by both pedestrian navigation and municipal planning views.",
+      "Next.js keeps the user-facing route experience fast while leaving the geospatial workload on the backend.",
+      "QGIS supports validation of tree canopy and heat-island assumptions before they are translated into routing weights."
     ],
     links: [
-      { label: "Code Walkthrough", href: "/operator#contact" },
-      { label: "Discuss GPrime", href: "/operator#contact" }
+      { label: "Code Walkthrough", href: "/#contact" },
+      { label: "Discuss VERDEX", href: "/#contact" }
     ]
   },
   {
     slug: "cv-accident-detection-emergency-pipeline",
-    number: "System 04",
+    number: "System 05",
     title: "CV Accident Detection & Emergency Pipeline",
     subtitle: "Public Safety Vision System",
     tag: "Computer Vision // Public Safety",
@@ -205,13 +241,13 @@ export const systems: PortfolioSystem[] = [
       "SMTP alerts and a dispatch portal make the system operational instead of stopping at model inference."
     ],
     links: [
-      { label: "Code Walkthrough", href: "/operator#contact" },
-      { label: "Discuss Safety Engine", href: "/operator#contact" }
+      { label: "Code Walkthrough", href: "https://github.com/AAC-Open-Source-Pool/Computer-Vision-Based-Intelligent-Road-Safety-System.git", external: true },
+      { label: "Discuss Safety Engine", href: "/#contact" }
     ]
   },
   {
     slug: "apex-productivity-app",
-    number: "System 05",
+    number: "System 06",
     title: "Apex Productivity App",
     subtitle: "Gamified AI Habit System",
     tag: "Full-Stack // Gamified AI",
@@ -239,13 +275,18 @@ export const systems: PortfolioSystem[] = [
       "The RPG progression engine creates a measurable loop where effort becomes visible momentum."
     ],
     links: [
-      { label: "Code Walkthrough", href: "/operator#contact" },
-      { label: "Discuss Apex", href: "/operator#contact" }
+      { label: "Code Walkthrough", href: "https://github.com/Charan21-code/Apex.git", external: true },
+      { label: "Discuss Apex", href: "/#contact" }
     ]
   }
 ];
 
-export const featuredSystems = systems.slice(0, 3);
+// Helper to filter and get by slug in the exact order requested
+export const featuredSystems = [
+  systems.find(s => s.slug === "gprime-offline-coding-engine")!,
+  systems.find(s => s.slug === "agentic-production-management-system")!,
+  systems.find(s => s.slug === "ai-driven-soar-platform")!
+];
 
 export const filterLabels: Array<"All" | SystemCategory> = [
   "All",
@@ -276,11 +317,32 @@ export const ledgerEntries = [
     impact: "Core Member (Tech Domain) at Advanced Academic Center (AAC)."
   },
   {
-    year: "Ongoing",
-    category: "Mentorship",
-    deployment: "MLOps Community Mentorship",
+    year: "Active",
+    category: "System",
+    deployment: "Agentic Production Management System",
     impact:
-      "Mentored first-year students on ML-Ops fundamentals, deployment pipelines, and production AI best practices."
+      "Architected a multi-agent factory simulation with demand forecasting, machine health telemetry agents, and central orchestration routing."
+  },
+  {
+    year: "Active",
+    category: "Infrastructure",
+    deployment: "Apex Platform — DevOps Deployment",
+    impact:
+      "Deployed the Apex productivity platform to production; managing ongoing infrastructure, scaling, and uptime as DevOps/Architect."
+  },
+  {
+    year: "Adopted",
+    category: "Institutional Infra",
+    deployment: "GRIET Coding Platform — Developer",
+    impact:
+      "Built and shipped an institutional competitive coding platform adopted by the GRIET campus community for club contests and events."
+  },
+  {
+    year: "Ongoing",
+    category: "Leadership",
+    deployment: "AAC Mentorship Sessions — Mentor",
+    impact:
+      "Running ongoing mentorship sessions for junior students through the Advanced Academic Center, covering systems thinking and full-stack development."
   }
 ];
 
@@ -288,9 +350,9 @@ export const operatorStatement =
   "Building resilient systems requires a resilient mindset. When I step away from the architecture, you'll find me trekking high-altitude trails on a budget seeking out the grit of the mountains over luxury travel. I admire those who execute flawlessly under immense pressure, much like a legendary cricket chase, and I carry that same composure into my deadlines. Let's build something that matters.";
 
 export const contactLinks: SystemLink[] = [
-  { label: "Email", href: "mailto:your.email@example.com", external: true },
-  { label: "LinkedIn", href: "https://www.linkedin.com/", external: true },
-  { label: "GitHub", href: "https://github.com/", external: true }
+  { label: "Email", href: "mailto:mulagiricharantej@gmail.com", external: true },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/charantejmulagiri/", external: true },
+  { label: "GitHub", href: "https://github.com/Charan21-code", external: true }
 ];
 
 export function getSystemBySlug(slug: string) {
